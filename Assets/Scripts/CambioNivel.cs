@@ -8,14 +8,10 @@ public class CambiarNivel: MonoBehaviour
     public bool pasarNivel;
     public int indiceNivel;
 
-    void Start()
-    {
-
-    }
-
+   
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SiguienteNivel(indiceNivel);
         }
@@ -29,5 +25,11 @@ public class CambiarNivel: MonoBehaviour
     public void SiguienteNivel(int indice)
     {
         SceneManager.LoadScene(indice);
+    }
+      public void SalirDelJuego()
+        
+      
+    {
+        Application.Quit();
     }
 }
